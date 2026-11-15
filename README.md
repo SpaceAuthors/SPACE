@@ -98,3 +98,9 @@ The defaults of `train_space.py` are the configuration used in the paper.
 | Validation score | Macro F1 over classes 1 and 2 on the harmful validation videos, multiplied by 0.107 / FA when the validation false-alarm rate FA exceeds 0.107 (`--fa-cap`). Used for checkpoint selection, Pareto selection and `val_best`. |
 | Pareto selection | Candidate feature sets S = {k : sigmoid(g_k) > δ} for δ ∈ {0.01, 0.05, 0.1, 0.2, …, 0.9, 0.95, 0.99}; Pareto front over (validation score, \|S\|); among front points within one standard error of the best (account-level bootstrap, 500 resamples), the one with the smallest \|S\|. |
 | Seeds | The model of fold f under seed s is trained with random seed 100·s + f. |
+
+---
+
+## License
+
+Released under the MIT License (see `LICENSE`).
